@@ -20,7 +20,8 @@ export class BottomDrawerDemo {
   photosSliderOptions = {
     spaceBetween: 0,
     initialSlide: 0,
-    slidesPerView: 2.125,
+    slidesPerView: 2.825,
+    slidesOffsetBefore: 13,
     zoom: {
       toggle: false
     }
@@ -31,6 +32,7 @@ export class BottomDrawerDemo {
     spaceBetween: 0,
     initialSlide: 0,
     slidesPerView: 1.75,
+    slidesOffsetBefore: 13,
     zoom: {
       toggle: false
     }
@@ -188,7 +190,7 @@ export class BottomDrawerDemo {
               </ion-item>
               <ion-item detail>
                 <ion-avatar slot="start">
-                  <ion-icon name="create" />
+                  <ion-icon name="md-create" />
                 </ion-avatar>
                 <ion-label>
                   Suggest an edit
@@ -202,7 +204,7 @@ export class BottomDrawerDemo {
               </p>
             </div>
 
-            <div class="info info-photos">
+            <div class="info info-photos bordered">
               <h3>Photos</h3>
               <ion-slides options={this.photosSliderOptions}>
                 <ion-slide>
@@ -233,7 +235,7 @@ export class BottomDrawerDemo {
               </ion-slides>
             </div>
 
-            <div class="info info-planets">
+            <div class="info info-planets bordered">
               <h3>Related Planets</h3>
               <ion-slides options={this.planetsSliderOptions}>
                 <ion-slide>
