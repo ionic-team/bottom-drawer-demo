@@ -12,7 +12,6 @@ import {
 
 
 export namespace Components {
-  interface AnimationsDemo {}
   interface BottomDrawer {
     'expanded': boolean;
     'fixed': any;
@@ -21,37 +20,11 @@ export namespace Components {
     'startOffset': number;
   }
   interface BottomDrawerDemo {}
-  interface ExpandingCard {
-    'close': () => Promise<void>;
-    'maxScale': number;
-    'minScale': number;
-    'parentScrollTop': number;
-  }
-  interface ExpandingCardButtons {}
-  interface ExpandingCardDemo {}
   interface FancyApp {}
-  interface MoviesDemo {}
-  interface ParallaxImage {
-    'parentScrollTop': number;
-    'setScroll': (scrollTop: number) => Promise<void>;
-    'src': string;
-  }
-  interface ParallaxImageDemo {}
-  interface PhotoViewer {
-    'src': string;
-  }
-  interface PhotoViewerDemo {}
-  interface SwipeableTabsDemo {}
 }
 
 declare global {
 
-
-  interface HTMLAnimationsDemoElement extends Components.AnimationsDemo, HTMLStencilElement {}
-  var HTMLAnimationsDemoElement: {
-    prototype: HTMLAnimationsDemoElement;
-    new (): HTMLAnimationsDemoElement;
-  };
 
   interface HTMLBottomDrawerElement extends Components.BottomDrawer, HTMLStencilElement {}
   var HTMLBottomDrawerElement: {
@@ -65,84 +38,19 @@ declare global {
     new (): HTMLBottomDrawerDemoElement;
   };
 
-  interface HTMLExpandingCardElement extends Components.ExpandingCard, HTMLStencilElement {}
-  var HTMLExpandingCardElement: {
-    prototype: HTMLExpandingCardElement;
-    new (): HTMLExpandingCardElement;
-  };
-
-  interface HTMLExpandingCardButtonsElement extends Components.ExpandingCardButtons, HTMLStencilElement {}
-  var HTMLExpandingCardButtonsElement: {
-    prototype: HTMLExpandingCardButtonsElement;
-    new (): HTMLExpandingCardButtonsElement;
-  };
-
-  interface HTMLExpandingCardDemoElement extends Components.ExpandingCardDemo, HTMLStencilElement {}
-  var HTMLExpandingCardDemoElement: {
-    prototype: HTMLExpandingCardDemoElement;
-    new (): HTMLExpandingCardDemoElement;
-  };
-
   interface HTMLFancyAppElement extends Components.FancyApp, HTMLStencilElement {}
   var HTMLFancyAppElement: {
     prototype: HTMLFancyAppElement;
     new (): HTMLFancyAppElement;
   };
-
-  interface HTMLMoviesDemoElement extends Components.MoviesDemo, HTMLStencilElement {}
-  var HTMLMoviesDemoElement: {
-    prototype: HTMLMoviesDemoElement;
-    new (): HTMLMoviesDemoElement;
-  };
-
-  interface HTMLParallaxImageElement extends Components.ParallaxImage, HTMLStencilElement {}
-  var HTMLParallaxImageElement: {
-    prototype: HTMLParallaxImageElement;
-    new (): HTMLParallaxImageElement;
-  };
-
-  interface HTMLParallaxImageDemoElement extends Components.ParallaxImageDemo, HTMLStencilElement {}
-  var HTMLParallaxImageDemoElement: {
-    prototype: HTMLParallaxImageDemoElement;
-    new (): HTMLParallaxImageDemoElement;
-  };
-
-  interface HTMLPhotoViewerElement extends Components.PhotoViewer, HTMLStencilElement {}
-  var HTMLPhotoViewerElement: {
-    prototype: HTMLPhotoViewerElement;
-    new (): HTMLPhotoViewerElement;
-  };
-
-  interface HTMLPhotoViewerDemoElement extends Components.PhotoViewerDemo, HTMLStencilElement {}
-  var HTMLPhotoViewerDemoElement: {
-    prototype: HTMLPhotoViewerDemoElement;
-    new (): HTMLPhotoViewerDemoElement;
-  };
-
-  interface HTMLSwipeableTabsDemoElement extends Components.SwipeableTabsDemo, HTMLStencilElement {}
-  var HTMLSwipeableTabsDemoElement: {
-    prototype: HTMLSwipeableTabsDemoElement;
-    new (): HTMLSwipeableTabsDemoElement;
-  };
   interface HTMLElementTagNameMap {
-    'animations-demo': HTMLAnimationsDemoElement;
     'bottom-drawer': HTMLBottomDrawerElement;
     'bottom-drawer-demo': HTMLBottomDrawerDemoElement;
-    'expanding-card': HTMLExpandingCardElement;
-    'expanding-card-buttons': HTMLExpandingCardButtonsElement;
-    'expanding-card-demo': HTMLExpandingCardDemoElement;
     'fancy-app': HTMLFancyAppElement;
-    'movies-demo': HTMLMoviesDemoElement;
-    'parallax-image': HTMLParallaxImageElement;
-    'parallax-image-demo': HTMLParallaxImageDemoElement;
-    'photo-viewer': HTMLPhotoViewerElement;
-    'photo-viewer-demo': HTMLPhotoViewerDemoElement;
-    'swipeable-tabs-demo': HTMLSwipeableTabsDemoElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface AnimationsDemo extends JSXBase.HTMLAttributes<HTMLAnimationsDemoElement> {}
   interface BottomDrawer extends JSXBase.HTMLAttributes<HTMLBottomDrawerElement> {
     'expanded'?: boolean;
     'fixed'?: any;
@@ -152,40 +60,12 @@ declare namespace LocalJSX {
     'startOffset'?: number;
   }
   interface BottomDrawerDemo extends JSXBase.HTMLAttributes<HTMLBottomDrawerDemoElement> {}
-  interface ExpandingCard extends JSXBase.HTMLAttributes<HTMLExpandingCardElement> {
-    'maxScale'?: number;
-    'minScale'?: number;
-    'parentScrollTop'?: number;
-  }
-  interface ExpandingCardButtons extends JSXBase.HTMLAttributes<HTMLExpandingCardButtonsElement> {}
-  interface ExpandingCardDemo extends JSXBase.HTMLAttributes<HTMLExpandingCardDemoElement> {}
   interface FancyApp extends JSXBase.HTMLAttributes<HTMLFancyAppElement> {}
-  interface MoviesDemo extends JSXBase.HTMLAttributes<HTMLMoviesDemoElement> {}
-  interface ParallaxImage extends JSXBase.HTMLAttributes<HTMLParallaxImageElement> {
-    'parentScrollTop'?: number;
-    'src'?: string;
-  }
-  interface ParallaxImageDemo extends JSXBase.HTMLAttributes<HTMLParallaxImageDemoElement> {}
-  interface PhotoViewer extends JSXBase.HTMLAttributes<HTMLPhotoViewerElement> {
-    'src'?: string;
-  }
-  interface PhotoViewerDemo extends JSXBase.HTMLAttributes<HTMLPhotoViewerDemoElement> {}
-  interface SwipeableTabsDemo extends JSXBase.HTMLAttributes<HTMLSwipeableTabsDemoElement> {}
 
   interface IntrinsicElements {
-    'animations-demo': AnimationsDemo;
     'bottom-drawer': BottomDrawer;
     'bottom-drawer-demo': BottomDrawerDemo;
-    'expanding-card': ExpandingCard;
-    'expanding-card-buttons': ExpandingCardButtons;
-    'expanding-card-demo': ExpandingCardDemo;
     'fancy-app': FancyApp;
-    'movies-demo': MoviesDemo;
-    'parallax-image': ParallaxImage;
-    'parallax-image-demo': ParallaxImageDemo;
-    'photo-viewer': PhotoViewer;
-    'photo-viewer-demo': PhotoViewerDemo;
-    'swipeable-tabs-demo': SwipeableTabsDemo;
   }
 }
 
