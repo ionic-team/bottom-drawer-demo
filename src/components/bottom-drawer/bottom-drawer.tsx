@@ -1,6 +1,5 @@
 import { Component, h, State, Prop, Element, Watch, Event, EventEmitter } from '@stencil/core';
 import { Gesture, MoveDetail, EndDetail, StartDetail } from '../../gesture';
-import { bezier } from '../../easing';
 
 @Component({
   tag: 'bottom-drawer',
@@ -13,8 +12,7 @@ export class BottomDrawer {
   @Event() menuToggle: EventEmitter;
   @Prop() expanded = false;
   @Prop() startOffset = 20;
-  @Prop() fixed
-  @Prop() menuToggled: (boolean, finalY: number) => void;
+  @Prop() onMenuToggled: (boolean, finalY: number) => void;
   @Prop() onPositionChange: (detail: MoveDetail) => void;
 
   @State() active = false;
@@ -239,7 +237,6 @@ export class BottomDrawer {
             <slot />
           </div>
         </div>
-        {/*<div class="backdrop" onClick={this.close}></div>*/}
       </div>
     );
   }

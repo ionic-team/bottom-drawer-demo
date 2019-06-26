@@ -132,8 +132,8 @@ export class BottomDrawerDemo {
         <bottom-drawer
           ref={(e: HTMLBottomDrawerElement) => this.pullRef = e}
           expanded={this.isPullMenuExpanded}
-          menuToggled={this.handleMenuToggled}
           startOffset={230}
+          onMenuToggled={this.handleMenuToggled}
           onPositionChange={this.handleMenuPositionChange}
           >
           <div slot="start" class="start-content">

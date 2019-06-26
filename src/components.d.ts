@@ -14,8 +14,7 @@ import {
 export namespace Components {
   interface BottomDrawer {
     'expanded': boolean;
-    'fixed': any;
-    'menuToggled': (boolean, finalY: number) => void;
+    'onMenuToggled': (boolean, finalY: number) => void;
     'onPositionChange': (detail: MoveDetail) => void;
     'startOffset': number;
   }
@@ -53,9 +52,8 @@ declare global {
 declare namespace LocalJSX {
   interface BottomDrawer extends JSXBase.HTMLAttributes<HTMLBottomDrawerElement> {
     'expanded'?: boolean;
-    'fixed'?: any;
-    'menuToggled'?: (boolean, finalY: number) => void;
     'onMenuToggle'?: (event: CustomEvent<any>) => void;
+    'onMenuToggled'?: (boolean, finalY: number) => void;
     'onPositionChange'?: (detail: MoveDetail) => void;
     'startOffset'?: number;
   }
