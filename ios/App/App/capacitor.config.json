@@ -1,0 +1,7 @@
+{
+  "appId": "com.ionicframework.fancy",
+  "appName": "FancyTest",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

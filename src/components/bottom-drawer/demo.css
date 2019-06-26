@@ -1,0 +1,183 @@
+bottom-drawer-demo {
+  display: block;
+  height: 100%;
+}
+
+/**
+ * Some CSS for core ionic look and feel to match our design
+ */
+bottom-drawer-demo ion-content {
+  pointer-events: auto;
+  --ion-item-border-color: #EBECED;
+}
+
+bottom-drawer-demo ion-avatar {
+  background-color: #EFEFEF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+bottom-drawer-demo ion-item {
+  --min-height: 60px;
+}
+bottom-drawer-demo ion-button {
+  --border-radius: 24px;
+}
+bottom-drawer-demo ion-button.ion-color-light {
+  --ion-color-light: #EFEFEF;
+}
+
+bottom-drawer-demo .screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+bottom-drawer-demo .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 200%;
+  background-position: 20% 0;
+  z-index: 1;
+
+  transform: translate3d(0, 0, 0);
+           
+  background-image: url('/assets/mars.jpg');
+}
+
+bottom-drawer-demo .heading {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+bottom-drawer-demo .heading h1 {
+  margin: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 34px;
+  flex: 1;
+}
+bottom-drawer-demo .heading .more {
+  color: white;
+  width: 20px;
+  font-size: 36px;
+  line-height: 36px;
+}
+bottom-drawer-demo .heading .more ion-icon {
+  vertical-align: middle;
+}
+
+bottom-drawer-demo .start-content {
+  padding: 12px 20px;
+  border-bottom: 1px solid #EBECED;
+}
+bottom-drawer-demo .start-content h2, .start-content h4 {
+  margin: 0;
+}
+bottom-drawer-demo .start-content h2 {
+  font-weight: 700;
+}
+bottom-drawer-demo .start-content h4 {
+  color: #B2B2B2;
+}
+bottom-drawer-demo .buttons {
+  display: flex;
+  padding: 16px 0;
+}
+bottom-drawer-demo .buttons ion-button {
+  flex: 1;
+}
+bottom-drawer-demo .facts {
+  display: flex;
+  padding-bottom: 16px;
+}
+bottom-drawer-demo .fact {
+  flex: 1;
+  padding: 0 10px;
+  text-align: center;
+}
+bottom-drawer-demo .fact h5 {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+bottom-drawer-demo .fact small {
+  font-size: 12px;
+  color: #B2B2B2;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+}
+bottom-drawer-demo .info {
+  border-bottom: 1px solid #E9EAEA;
+}
+bottom-drawer-demo .info:last-child {
+  border-bottom: 0;
+}
+bottom-drawer-demo .info h3, bottom-drawer-demo .info p {
+  padding: 10px 20px;
+}
+bottom-drawer-demo .info h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+}
+bottom-drawer-demo .info p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #666666;
+}
+
+bottom-drawer-demo .info.info-photos {
+  padding-bottom: 20px;
+}
+bottom-drawer-demo .info.info-photos ion-slides {
+  height: 150px;
+}
+bottom-drawer-demo .info.info-planets {
+  margin-bottom: 50px;
+}
+bottom-drawer-demo .info.info-planets ion-slides {
+  height: 200px;
+}
+/*
+.info-photos ion-slide {
+  width: 120px;
+  height: 96px;
+}
+.info-planets ion-slide {
+  width: 200px;
+  height: 160px;
+}
+*/
+
+bottom-drawer-demo .photos {
+  width: 2000px;
+}
+
+bottom-drawer-demo .photos .photo {
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+
+bottom-drawer-demo .photos .photo:first-child {
+  margin-left: 15px;
+}
+bottom-drawer-demo .photos .photo:last-child {
+}
+
+bottom-drawer-demo .photos .photo img {
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(2, 8, 20, 0.08), 0px 4px 8px rgba(2, 8, 20, 0.1);
+}
