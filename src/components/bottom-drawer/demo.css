@@ -153,7 +153,8 @@ ion-button.ion-color-light {
   height: 100px;
 }
 .info.info-planets {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .info.info-planets ion-slides {
   height: 150px;

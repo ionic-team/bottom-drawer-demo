@@ -140,9 +140,9 @@ export class BottomDrawer {
   private onGestureEnd = (_ev: PointerEvent, detail: EndDetail) => {
     this.enableTransition();
 
-    if (detail.vy < -0.8) {
+    if (detail.vy < -0.6) {
       this.slideOpen();
-    } else if(detail.vy > 0.8) {
+    } else if(detail.vy > 0.6) {
       this.slideClose();
     } else if (this.y <= this.height / 2) {
       this.slideOpen();
