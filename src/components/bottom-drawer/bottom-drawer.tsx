@@ -17,8 +17,6 @@ export class BottomDrawer {
 
   @State() active = false;
 
-  animationCurve = bezier(0.23, 1, 0.32, 1);
-
   // Animation duration
   animationDuration = 400;
   // Distance from the top
@@ -197,7 +195,7 @@ export class BottomDrawer {
 
   private fireToggled(isExpanded: boolean, finalY: number) {
     this.menuToggle.emit(isExpanded);
-    this.menuToggled && this.menuToggled(isExpanded, finalY);
+    this.onMenuToggled && this.onMenuToggled(isExpanded, finalY);
   }
 
 
