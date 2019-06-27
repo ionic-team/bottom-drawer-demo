@@ -136,14 +136,25 @@ export class BottomDrawer {
   private onGestureEnd = (_ev: PointerEvent, detail: EndDetail) => {
     this.enableTransition();
 
+    let expanded;
     if (detail.vy < -0.6) {
       this.slideOpen();
+      expanded = true;
     } else if(detail.vy > 0.6) {
       this.slideClose();
+      expanded = false;
     } else if (this.y <= this.height / 2) {
       this.slideOpen();
+      expanded = true;
     } else {
       this.slideClose();
+      expanded = false;
+    }
+
+    if (expanded) {
+      this.fireOpen();
+    } else {
+      this.fireClose();
     }
   }
   
@@ -172,7 +183,6 @@ export class BottomDrawer {
   private slideOpen() {
     // const startY = this.y;
     this.slideTo(this.topPadding);
-    this.fireToggled(true, this.topPadding);
     this.afterTransition(() => {
       this.growContentHeight(0);
     });
@@ -180,10 +190,8 @@ export class BottomDrawer {
 
   private slideClose() {
     // const startY = this.y;
-    const screenHeight = window.innerHeight;
-    const finalY = screenHeight - this.startOffset;
+    const finalY = this.getCollapsedY();
     this.slideTo(finalY);
-    this.fireToggled(false, finalY);
     this.afterTransition(() => {
       this.growContentHeight(0);
     });
@@ -193,11 +201,27 @@ export class BottomDrawer {
     setTimeout(fn, this.animationDuration);
   }
 
+  private getExpandedY() {
+    return this.topPadding;
+  }
+
+  private getCollapsedY() {
+    const screenHeight = window.innerHeight;
+    return screenHeight - this.startOffset;
+  }
+
   private fireToggled(isExpanded: boolean, finalY: number) {
     this.menuToggle.emit(isExpanded);
     this.onMenuToggled && this.onMenuToggled(isExpanded, finalY);
   }
 
+  private fireOpen() {
+    this.fireToggled(true, this.getExpandedY());
+  }
+
+  private fireClose() {
+    this.fireToggled(false, this.getCollapsedY());
+  }
 
   @Watch('expanded')
   handleExpandedChange() {
@@ -212,12 +236,13 @@ export class BottomDrawer {
     this.active = false;
   }
 
-  toggle = (e: MouseEvent) => {
-    e;
-    if (this.expanded) {
-      this.slideClose();
+  toggle = (_e: MouseEvent) => {
+    const newExpanded = !this.expanded;
+
+    if (newExpanded) {
+      this.fireOpen();
     } else {
-      this.slideOpen();
+      this.fireClose();
     }
   }
 
