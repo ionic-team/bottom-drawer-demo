@@ -166,7 +166,7 @@ export class BottomDrawer {
 
   private slideTo(y: number) {
     this.y = y;
-    this.el.style.transform = `translateY(${this.y}px)`;
+    this.el.style.transform = `translateY(${this.y}px) translateZ(0)`;
   }
 
   private slideOpen() {
